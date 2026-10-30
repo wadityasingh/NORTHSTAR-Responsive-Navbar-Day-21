@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NORTHSTAR — Responsive Navbar with Hamburger Menu</title>
+  <meta name="description" content="Day 21 Web Development Internship project: A clean, accessible responsive navigation bar with a hamburger menu built with HTML5, CSS3, and Vanilla JavaScript.">
+  <meta property="og:title" content="NORTHSTAR — Responsive Navbar with Hamburger Menu">
+  <meta property="og:description" content="A responsive navigation experience designed to remain clear, accessible, and easy to use across every screen size.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Header & Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" aria-label="NORTHSTAR Home">
+        NORTHSTAR
+      </a>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button 
+        type="button" 
+        class="hamburger-btn" 
+        id="hamburger-btn" 
+        aria-label="Toggle navigation menu" 
+        aria-controls="primary-nav" 
+        aria-expanded="false"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="nav-menu" id="primary-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-cta-wrapper">
+          <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay for Click-Outside -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="content-container hero-container">
+        <div class="hero-content">
+          <span class="eyebrow-badge">Day 21 Internship Task</span>
+          <h1 class="hero-heading">Navigation That Works Everywhere.</h1>
+          <p class="hero-description">
+            A responsive navigation experience designed to remain clear, accessible, and easy to use across every screen size.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explore Services</a>
+            <a href="#demo" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demonstration Section -->
+    <section class="demo-section" id="demo">
+      <div class="content-container">
+        <div class="section-header">
+          <span class="eyebrow-badge">Responsive Breakpoints</span>
+          <h2 class="section-heading">One Navigation. Every Screen.</h2>
+        </div>
+
+        <div class="breakpoints-grid">
+          <article class="breakpoint-card">
+            <div class="card-header">
+              <span class="screen-tag">Desktop</span>
+              <span class="resolution-spec">&gt; 768px</span>
+            </div>
+            <h3 class="card-title">Horizontal navigation.</h3>
+            <p class="card-text">
+              Direct access to all links, logo, and call-to-action button simultaneously on a single horizontal plane.
+            </p>
+          </article>
+
+          <article class="breakpoint-card">
+            <div class="card-header">
+              <span class="screen-tag">Tablet</span>
+              <span class="resolution-spec">768px – 1024px</span>
+            </div>
+            <h3 class="card-title">Flexible spacing and layout.</h3>
+            <p class="card-text">
+              Proportional padding and fluid layout preserve clear visual hierarchy without cluttering interface elements.
+            </p>
+          </article>
+
+          <article class="breakpoint-card">
+            <div class="card-header">
+              <span class="screen-tag">Mobile</span>
+              <span class="resolution-spec">&le; 768px</span>
+            </div>
+            <h3 class="card-title">Compact hamburger navigation.</h3>
+            <p class="card-text">
+              Conceals links behind an accessible hamburger toggle button that transforms into a close control with smooth slide-down panel.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">NORTHSTAR</a>
+        <p class="footer-copyright">
+          &copy; 2026 NORTHSTAR. All rights reserved.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
